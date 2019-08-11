@@ -56,23 +56,23 @@
 						</execution>
 					</executions>
 				</plugin>
-				<plugin>
-					<groupId>com.spotify</groupId>
-					<artifactId>dockerfile-maven-plugin</artifactId>
-					<version>1.4.12</version>
-					<configuration>
-						<repository>${docker.image.prefix}/${project.artifactId}</repository>
-                        <tag>latest</tag>
-					</configuration>
-					<executions>
-						<execution>
-							<phase>package</phase>
-							<goals>
-								<goal>build</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
+<!--				<plugin>-->
+<!--					<groupId>com.spotify</groupId>-->
+<!--					<artifactId>dockerfile-maven-plugin</artifactId>-->
+<!--					<version>1.4.12</version>-->
+<!--					<configuration>-->
+<!--						<repository>${docker.image.prefix}/${project.artifactId}</repository>-->
+<!--                        <tag>latest</tag>-->
+<!--					</configuration>-->
+<!--					<executions>-->
+<!--						<execution>-->
+<!--							<phase>package</phase>-->
+<!--							<goals>-->
+<!--								<goal>build</goal>-->
+<!--							</goals>-->
+<!--						</execution>-->
+<!--					</executions>-->
+<!--				</plugin>-->
 				<plugin>
 					<groupId>pl.project13.maven</groupId>
 					<artifactId>git-commit-id-plugin</artifactId>
