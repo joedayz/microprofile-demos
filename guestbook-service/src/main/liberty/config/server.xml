@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="${project.artifactId}">
+
+    <featureManager>
+        <feature>microProfile-2.2</feature>
+        <feature>jpa-2.2</feature>
+    </featureManager>
+
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="${httpPort}"
+                  httpsPort="${httpsPort}"/>
+
+    <webApplication location="${project.build.finalName}.war" contextRoot="/"/>
+
+    <logging traceSpecification="${log.name}.*=${log.level}"/>
+
+    <dataSource id="DefaultDataSource" jndiName="jdbc/GuestBookDS" type="javax.sql.XADataSource">
+        <jdbcDriver javax.sql.XADataSource="com.mysql.cj.jdbc.MysqlXADataSource" libraryRef="MySQLLib"/>
+        <properties databaseName="app" serverName="localhost" portNumber="3306" user="root" password="secret"/>
+    </dataSource>
+
+    <library id="MySQLLib">
+        <file name="/Users/josediaz/Libraries/mysql-connector-java-8.0.16.jar"/>
+    </library>
+
+
+
+</server>

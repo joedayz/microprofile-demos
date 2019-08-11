@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="${project.artifactId}">
+
+    <featureManager>
+        <feature>microProfile-2.2</feature>
+        <feature>usr:opentracingZipkin-0.31</feature>
+    </featureManager>
+
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="${httpPort}"
+                  httpsPort="${httpsPort}"/>
+
+    <webApplication location="${project.build.finalName}.war" contextRoot="/"/>
+
+    <logging traceSpecification="${log.name}.*=${log.level}"/>
+
+    <opentracingZipkin host="localhost" port="9411"/>
+
+</server>

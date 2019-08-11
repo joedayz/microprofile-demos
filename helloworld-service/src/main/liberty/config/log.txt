@@ -1,0 +1,84 @@
+mvn install   
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< com.example.guestbook:helloworld-service >--------------
+[INFO] Building helloworld-service 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ helloworld-service ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ helloworld-service ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ helloworld-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/josediaz/Downloads/helloworld-service/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ helloworld-service ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ helloworld-service ---
+[INFO] 
+[INFO] --- download-maven-plugin:1.4.0:wget (install-tracer) @ helloworld-service ---
+[INFO] Got from cache: /Users/josediaz/.m2/repository/.cache/download-maven-plugin/liberty-opentracing-zipkintracer-1.3-sample.zip_105da7d1b1fef818882aeaa3a1c22422
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ helloworld-service ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [helloworld-service] in [/Users/josediaz/Downloads/helloworld-service/target/helloworld-service]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/josediaz/Downloads/helloworld-service/src/main/webapp]
+[INFO] Webapp assembled in [83 msecs]
+[INFO] Building war: /Users/josediaz/Downloads/helloworld-service/target/helloworld-service.war
+[INFO] 
+[INFO] --- liberty-maven-plugin:2.2:create-server (package-server) @ helloworld-service ---
+[INFO] CWWKM2102I: Using artifact based assembly archive : io.openliberty:openliberty-runtime:null:RELEASE:zip.
+[INFO] CWWKM2102I: Using installDirectory : /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp.
+[INFO] CWWKM2102I: Using serverName : helloworld-service.
+[INFO] CWWKM2102I: Using serverDirectory : /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp/usr/servers/helloworld-service.
+[INFO] CWWKM2185I: The liberty-maven-plugin configuration parameter "appsDirectory" value defaults to "apps".
+[INFO] CWWKM2112I: Re-using previously installed assembly.
+[INFO] Copying 1 file to /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp/usr/servers/helloworld-service
+[INFO] CWWKM2144I: Update server configuration file server.xml from /Users/josediaz/Downloads/helloworld-service/target/classes/config/server.xml.
+[INFO] 
+[INFO] --- liberty-maven-plugin:2.2:install-apps (package-server) @ helloworld-service ---
+[INFO] CWWKM2102I: Using artifact based assembly archive : io.openliberty:openliberty-runtime:null:RELEASE:zip.
+[INFO] CWWKM2102I: Using installDirectory : /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp.
+[INFO] CWWKM2102I: Using serverName : helloworld-service.
+[INFO] CWWKM2102I: Using serverDirectory : /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp/usr/servers/helloworld-service.
+[INFO] Copying 1 file to /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp/usr/servers/helloworld-service
+[INFO] CWWKM2144I: Update server configuration file server.xml from /Users/josediaz/Downloads/helloworld-service/target/classes/config/server.xml.
+[INFO] CWWKM2185I: The liberty-maven-plugin configuration parameter "appsDirectory" value defaults to "apps".
+[INFO] CWWKM2160I: Installing application /Users/josediaz/Downloads/helloworld-service/target/helloworld-service.war.
+[INFO] Copying 1 file to /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp/usr/servers/helloworld-service/apps
+[INFO] 
+[INFO] --- liberty-maven-plugin:2.2:package-server (package-server) @ helloworld-service ---
+[INFO] CWWKM2102I: Using artifact based assembly archive : io.openliberty:openliberty-runtime:null:RELEASE:zip.
+[INFO] CWWKM2102I: Using installDirectory : /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp.
+[INFO] CWWKM2102I: Using serverName : helloworld-service.
+[INFO] CWWKM2102I: Using serverDirectory : /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp/usr/servers/helloworld-service.
+[INFO] CWWKM2112I: Re-using previously installed assembly.
+[INFO] CWWKM2134I: Packaging server helloworld-service.
+[INFO] Copying 1 file to /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp/usr/servers/helloworld-service
+[INFO] CWWKM2144I: Update server configuration file server.xml from /Users/josediaz/Downloads/helloworld-service/target/classes/config/server.xml.
+[INFO] CWWKM2136I: Package file location is /Users/josediaz/Downloads/helloworld-service/target/helloworld-service.jar.
+[INFO] CWWKM2001I: server.config.dir is /Users/josediaz/Downloads/helloworld-service/target/liberty/wlp/usr/servers/helloworld-service.
+[INFO] CWWKM2001I: server.output.dir is /Users/josediaz/Downloads/helloworld-service/target/wlp-package/helloworld-service.
+[INFO] CWWKM2001I: Invoke command is [/Users/josediaz/Downloads/helloworld-service/target/liberty/wlp/bin/server, package, helloworld-service, --archive=/Users/josediaz/Downloads/helloworld-service/target/helloworld-service.jar, --include=runnable].
+[INFO] 
+[INFO] Packaging server helloworld-service.
+[INFO] Server helloworld-service package complete in /Users/josediaz/Downloads/helloworld-service/target/helloworld-service.jar.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ helloworld-service ---
+[INFO] Installing /Users/josediaz/Downloads/helloworld-service/target/helloworld-service.war to /Users/josediaz/.m2/repository/com/example/guestbook/helloworld-service/1.0-SNAPSHOT/helloworld-service-1.0-SNAPSHOT.war
+[INFO] Installing /Users/josediaz/Downloads/helloworld-service/pom.xml to /Users/josediaz/.m2/repository/com/example/guestbook/helloworld-service/1.0-SNAPSHOT/helloworld-service-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 15.745 s
+[INFO] Finished at: 2019-08-06T00:13:03-05:00
+[INFO] ------------------------------------------------------------------------
+ ~/Downloads/helloworld-service  
